@@ -91,6 +91,17 @@ body.dark li.completed {
   color: #aaa;
 }
 
+.preview-img {
+  max-width: 100%;
+  margin-top: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.preview-container {
+  margin-top: 10px;
+}
+
 /* ---------- Buttons ---------- */
 button {
   padding: 5px 10px;
