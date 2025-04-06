@@ -1,20 +1,29 @@
-/* Base styling */
+/* ---------- Base Theme Styling ---------- */
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #f5f5f5;
   padding: 40px 20px;
-  color: #333;
   margin: 0;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-/* Page title */
+body.dark {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body:not(.dark) {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+/* ---------- Page Title ---------- */
 h1 {
   text-align: center;
   color: #0077cc;
   margin-top: 0;
 }
 
-/* Main container for both people */
+/* ---------- Chores Container Layout ---------- */
 #choresContainer {
   display: flex;
   justify-content: center;
@@ -24,7 +33,7 @@ h1 {
   padding: 0 20px;
 }
 
-/* Individual person section */
+/* ---------- Person Columns ---------- */
 .person {
   flex: 1 1 300px;
   max-width: 400px;
@@ -33,6 +42,12 @@ h1 {
   border-radius: 12px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+body.dark .person {
+  background-color: #1f1f1f;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
 .person h2 {
@@ -41,14 +56,13 @@ h1 {
   margin-top: 0;
 }
 
-/* Chore list styling */
+/* ---------- Chore List Styling ---------- */
 .choreList {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-/* Individual chore items */
 li {
   background: white;
   border-radius: 8px;
@@ -61,13 +75,23 @@ li {
   transition: background-color 0.2s;
 }
 
+body.dark li {
+  background-color: #2c2c2c;
+  color: #ddd;
+}
+
 li.completed {
   background: #d4edda;
   text-decoration: line-through;
   color: #666;
 }
 
-/* Complete/undo buttons */
+body.dark li.completed {
+  background: #265d3a;
+  color: #aaa;
+}
+
+/* ---------- Buttons ---------- */
 button {
   padding: 5px 10px;
   font-size: 0.9em;
@@ -83,7 +107,16 @@ button:hover {
   background-color: #d0e7ff;
 }
 
-/* Responsive: stack columns on smaller screens */
+body.dark button {
+  background-color: #333c4a;
+  color: #87cefa;
+}
+
+body.dark button:hover {
+  background-color: #445366;
+}
+
+/* ---------- Responsive Design ---------- */
 @media (max-width: 768px) {
   #choresContainer {
     flex-direction: column;
