@@ -102,6 +102,11 @@ body.dark li.completed {
   margin-top: 10px;
 }
 
+.preview-container p {
+  margin: 0;
+  font-size: 0.9em;
+}
+
 /* ---------- Buttons ---------- */
 button {
   padding: 5px 10px;

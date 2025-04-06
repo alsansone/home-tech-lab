@@ -34,15 +34,37 @@ fetch("chores.json")
     
     window.previewImage = function (input) {
       const file = input.files[0];
+      const preview = input.nextElementSibling;
+      const allowedTypes = ["image/jpeg", "image/png", "image/gif"];
+      const maxSizeMB = 2;
+    
+      // Reset preview
+      preview.innerHTML = "";
+    
       if (!file) return;
     
+      // Check file type
+      if (!allowedTypes.includes(file.type)) {
+        preview.innerHTML = `<p style="color: red;">❌ Invalid file type. Please upload a JPG, PNG, or GIF.</p>`;
+        input.value = ""; // clear the input
+        return;
+      }
+    
+      // Check file size
+      const sizeMB = file.size / (1024 * 1024);
+      if (sizeMB > maxSizeMB) {
+        preview.innerHTML = `<p style="color: red;">❌ File too large. Max size is ${maxSizeMB}MB.</p>`;
+        input.value = "";
+        return;
+      }
+    
+      // Show image preview
       const reader = new FileReader();
       reader.onload = function (e) {
-        const preview = input.nextElementSibling;
         preview.innerHTML = `<img src="${e.target.result}" class="preview-img" />`;
       };
       reader.readAsDataURL(file);
-    };
+    };    
 
     window.markComplete = (btn, index) => {
       const li = btn.parentElement;
