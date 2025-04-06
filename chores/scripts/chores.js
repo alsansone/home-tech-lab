@@ -1,22 +1,25 @@
 fetch("chores.json")
   .then((res) => res.json())
   .then((data) => {
-    const list = document.getElementById("choreList");
+    const adamList = document.getElementById("adamList");
+    const arielList = document.getElementById("arielList");
 
     data.chores.forEach((chore, index) => {
       const li = document.createElement("li");
       li.className = chore.completed ? "completed" : "";
 
       li.innerHTML = `
-        <span>
-          <strong>${chore.task}</strong> — Assigned to <em>${chore.assignedTo}</em>
-        </span>
+        <span><strong>${chore.task}</strong></span>
         <button onclick="markComplete(this, ${index})">
           ${chore.completed ? "Undo" : "Complete"}
         </button>
       `;
 
-      list.appendChild(li);
+      if (chore.assignedTo === "Adam") {
+        adamList.appendChild(li);
+      } else if (chore.assignedTo === "Ariel") {
+        arielList.appendChild(li);
+      }
     });
 
     window.markComplete = (btn, index) => {

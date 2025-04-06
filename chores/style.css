@@ -57,4 +57,27 @@ body {
     font-size: 0.9em;
     cursor: pointer;
   }
+
+  #choresContainer {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+  }
+  
+  .person {
+    flex: 1 1 300px;
+    max-width: 400px;
+  }
+  
+  .person h2 {
+    text-align: center;
+    color: #0077cc;
+  }
+  
+  .choreList {
+    list-style: none;
+    padding: 0;
+  }
   
