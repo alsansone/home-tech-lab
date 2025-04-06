@@ -1,0 +1,32 @@
+{
+    "people": ["Adam", "Ariel"],
+    "chores": [
+      { "task": "Make the beds", "assignedTo": "Adam", "completed": false },
+      { "task": "Dust bedroom furniture", "assignedTo": "Ariel", "completed": false },
+      { "task": "Vacuum bedroom floors", "assignedTo": "Adam", "completed": false },
+      { "task": "Tidy bedroom surfaces", "assignedTo": "Ariel", "completed": false },
+  
+      { "task": "Clean sinks & counters (bathroom)", "assignedTo": "Adam", "completed": false },
+      { "task": "Scrub toilets", "assignedTo": "Ariel", "completed": false },
+      { "task": "Wipe mirrors", "assignedTo": "Adam", "completed": false },
+      { "task": "Clean shower/tub", "assignedTo": "Ariel", "completed": false },
+      { "task": "Replace towels & bathroom trash", "assignedTo": "Adam", "completed": false },
+  
+      { "task": "Wipe kitchen countertops", "assignedTo": "Ariel", "completed": false },
+      { "task": "Clean out fridge", "assignedTo": "Adam", "completed": false },
+      { "task": "Mop kitchen floor", "assignedTo": "Ariel", "completed": false },
+      { "task": "Clean stovetop", "assignedTo": "Adam", "completed": false },
+      { "task": "Take out kitchen trash", "assignedTo": "Ariel", "completed": false },
+      { "task": "Dishwasher (load/unload)", "assignedTo": "Adam", "completed": false },
+  
+      { "task": "Vacuum/mop living room", "assignedTo": "Ariel", "completed": false },
+      { "task": "Dust living room surfaces", "assignedTo": "Adam", "completed": false },
+      { "task": "Straighten couch pillows", "assignedTo": "Ariel", "completed": false },
+      { "task": "Wipe TV/console area", "assignedTo": "Adam", "completed": false },
+  
+      { "task": "Wipe dining table", "assignedTo": "Ariel", "completed": false },
+      { "task": "Dust dining chairs", "assignedTo": "Adam", "completed": false },
+      { "task": "Vacuum/mop dining room", "assignedTo": "Ariel", "completed": false }
+    ]
+  }
+  
