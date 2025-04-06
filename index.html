@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home Tech Lab</title>
+  <style>
+    body {
+      background-color: #121212;
+      color: #e0e0e0;
+      font-family: 'Fira Code', monospace;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px 30px;
+    }
+
+    header h1 {
+      font-size: 3em;
+      color: #00ff99;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      color: #aaaaaa;
+      font-size: 1.2em;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 30px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .project {
+      background-color: #1f1f1f;
+      border: 1px solid #333;
+      border-radius: 8px;
+      padding: 20px;
+      transition: 0.3s;
+    }
+
+    .project:hover {
+      background-color: #272727;
+      transform: translateY(-3px);
+    }
+
+    .project h3 {
+      color: #00c8ff;
+      margin-bottom: 10px;
+    }
+
+    .project p {
+      color: #cccccc;
+      font-size: 0.95em;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.85em;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>👨‍💻 Home Tech Lab</h1>
+    <p>Welcome to my tech playground. Here’s what I’m building 👇</p>
+  </header>
+
+  <div class="project-grid">
+    <div class="project">
+      <h3>🕹️ Retro Game API</h3>
+      <p>Backend for an 8-bit styled web game. Built with Express + MongoDB.</p>
+    </div>
+    <div class="project">
+      <h3>🔐 Auth Demo</h3>
+      <p>A playground for OAuth2, JWT, and passwordless login strategies.</p>
+    </div>
+    <div class="project">
+      <h3>📈 Data Viz Dashboard</h3>
+      <p>Interactive charts using D3.js + real-time updates via WebSocket.</p>
+    </div>
+    <div class="project">
+      <h3>🤖 AI Chatbot</h3>
+      <p>Basic AI bot built with Node.js and OpenAI’s API. Fun little thing!</p>
+    </div>
+  </div>
+
+  <footer>
+    Server powered by Ubuntu + Nginx. Code and ☕️ fuels this machine 💻
+  </footer>
+</body>
+</html>
